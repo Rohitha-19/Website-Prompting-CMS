@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Complaint Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="auth-body">
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <div class="auth-container">
+        <div class="auth-left">
+            <div class="auth-branding">
+                <i class="fa-solid fa-headset auth-logo"></i>
+                <h2>CMS Portal</h2>
+                <p>Join us today to get your voice heard.</p>
+            </div>
+            <div class="auth-illustration">
+                <i class="fa-solid fa-users illustration-icon"></i>
+            </div>
+        </div>
+        <div class="auth-right">
+            <div class="auth-form-container">
+                <h3>Create an account</h3>
+                <p class="auth-sub">Fill in the details below to register.</p>
+
+                <form id="signup-form" class="auth-form">
+                    <div id="signup-error" class="error-message" style="display: none;"></div>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <div class="input-with-icon">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="name" placeholder="John Doe" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-with-icon">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="email" placeholder="john.doe@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="password" placeholder="••••••••" required minlength="6">
+                        </div>
+                        <small class="hint">Minimum 6 characters</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="confirm-password" placeholder="••••••••" required minlength="6">
+                        </div>
+                    </div>
+
+                    <!-- Role Selection (Hidden/Bonus: to simulate admin registration easily, we could expose it or let the first user be admin) -->
+                    <!-- In a real world SaaS, admin is created separately, but here we can add a toggle or simple choice for demo -->
+                    <div class="form-group role-selector">
+                        <label>Account Type (Demo Purpose)</label>
+                        <select id="role">
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary auth-submit">
+                        <i class="fa-solid fa-user-plus"></i> Sign Up
+                    </button>
+                    
+                    <p class="auth-link">Already have an account? <a href="index.html">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
