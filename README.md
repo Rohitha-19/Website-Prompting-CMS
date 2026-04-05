@@ -69,14 +69,14 @@ This project simulates a real-world SaaS dashboard with authentication, complain
 
 ---
 
-###  Import / Export
+### 📂 Import / Export
 
 * Export complaints as JSON file
 * Import complaints from JSON file
 
 ---
 
-###  UI/UX Highlights
+### 🎨 UI/UX Highlights
 
 * Modern SaaS dashboard design
 * Fully responsive (mobile, tablet, desktop)
@@ -129,7 +129,7 @@ project/
 
 ---
 
-##  Key Concepts Used
+## 🧠 Key Concepts Used
 
 * DOM Manipulation
 * Event Handling
